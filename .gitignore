@@ -115,3 +115,4 @@ fabric.properties
 go.work
 /.idea/conventionalCommit.xml
 /.idea/vcs.xml
+!/broker-service/brokerApp
