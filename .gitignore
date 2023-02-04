@@ -113,7 +113,8 @@ fabric.properties
 
 # Go workspace file
 go.work
-/.idea/conventionalCommit.xml
-/.idea/vcs.xml
+/.idea/
 /broker-service/brokerApp
 /front-end/frontApp
+/authentication-service/authApp
+project/db-data/
