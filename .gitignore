@@ -116,5 +116,6 @@ go.work
 /.idea/
 /broker-service/brokerApp
 /front-end/frontApp
+/logger-service/loggerServiceApp
 /authentication-service/authApp
 project/db-data/
