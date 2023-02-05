@@ -118,4 +118,5 @@ go.work
 /front-end/frontApp
 /logger-service/loggerServiceApp
 /authentication-service/authApp
+/mail-service/mailerApp
 project/db-data/
