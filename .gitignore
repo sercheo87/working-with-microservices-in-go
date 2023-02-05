@@ -119,4 +119,5 @@ go.work
 /logger-service/loggerServiceApp
 /authentication-service/authApp
 /mail-service/mailerApp
+/listener-service/listenerApp
 project/db-data/
