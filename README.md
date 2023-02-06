@@ -23,3 +23,49 @@ Generate the protobuf files
 cd logger-service/logs
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative logs.proto
 ```
+
+Build Caddy
+
+```bash
+cd project
+docker build -f caddy.dockerfile -t tsawler/caddy:1.0.0 .
+```
+
+### Swarm
+
+Init the swarm
+
+```bash
+swarm init
+```
+
+Deploy the stack
+
+```bash
+cd project
+stack deploy -c .\swarm.yml myapp
+```
+
+Up scale the service
+
+```bash
+docker service scale myapp_authentication-service=3
+```
+
+Delete stack
+
+```bash
+stack rm myapp
+```
+
+Exit the swarm
+
+```bash
+swarm leave
+```
+
+Force exit the swarm
+
+```bash
+swarm leave --force
+```
