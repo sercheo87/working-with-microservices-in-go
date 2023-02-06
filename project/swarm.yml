@@ -4,6 +4,25 @@ version: '3'
 # have to change the image: <name> part to whatever your image names are
 
 services:
+
+  caddy:
+    image: tsawler/caddy:1.0.0
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy/data:/data
+      - caddy/config:/config
+
+  frontend:
+    image: tsawler/frontend:1.0.0
+    deploy:
+      mode: replicated
+      replicas: 1
+
   broker-service:
     image: tsawler/broker-service:1.0.0
     ports:
@@ -86,3 +105,9 @@ services:
       POSTGRES_DB: users
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/data/
+
+volumes:
+  caddy_data:
+    external: true
+  caddy_config:
+    external: true
