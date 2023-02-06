@@ -2,6 +2,8 @@
 
 ## Introduction
 
+- 📚 [Course working-with-microservices-in-go](https://novopayment.udemy.com/course/working-with-microservices-in-go)
+
 This is a simple microservice in go. It is a simple REST API that returns a JSON object with a message.
 
 - [Web Frontend](http://localhost/)
